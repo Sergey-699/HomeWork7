@@ -61,19 +61,39 @@ public class Main {
         int total = 0;
         int accumulation = 12_000_000;
         int monthDeposit = 15000;
-        while (true){
+        while (true) {
             month++;
-            total+=monthDeposit;
-            if(month%6==0){
-                total+=total*0.07;
+            total += monthDeposit;
+            if (month % 6 == 0) {
+                total += total * 0.07;
             }
             System.out.println("Месяц: " + month + ", Сумма: " + total + " рублей");
-            if(total>=accumulation){
+            if (total >= accumulation) {
                 System.out.println("Cумма достигнута!");
                 break;
             }
         }
+
+
+            System.out.println("Задание 5");
+            int charge = 20;
+            int minute = 0;
+            int overheats = 0;
+            while (charge < 100 && overheats < 3) {
+                minute++;
+                if (minute % 10 == 0) {
+                    overheats++;
+                    System.out.println("Перегрев! Зарядка прервана на 2 минуты.");
+                    minute += 2;
+                    continue;
+                }
+                charge += 2;
+            }
+            if (overheats >= 3) {
+                System.out.println("Зарядка прекращена. Текущий заряд: " + charge + "%");
+            }
+            System.out.println("Время зарядки составило " + minute + " минут.");
+        }
     }
-}
 
 
