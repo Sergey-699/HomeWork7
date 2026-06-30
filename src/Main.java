@@ -22,5 +22,13 @@ public class Main {
             coveredDistance += 500;
         }
         while (coveredDistance <= 42195);
+
+        System.out.println("С циклом for");
+        int d = 0;
+        System.out.println("Пройденная дистанция");
+        for (; d <= 42195; d+=500) {
+            int remainingDistance = allDistance - d;
+            System.out.println("Держитесь! Осталось " + remainingDistance + " метров");
+        }
     }
 }
