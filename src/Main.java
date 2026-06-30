@@ -55,6 +55,24 @@ public class Main {
             budget -= 100;
         }
         System.out.println("Бюджет позволяет стоять " + paidDays + " дней.");
+
+        System.out.println("Задание 4");
+        int month = 0;
+        int total = 0;
+        int accumulation = 12_000_000;
+        int monthDeposit = 15000;
+        while (true){
+            month++;
+            total+=monthDeposit;
+            if(month%6==0){
+                total+=total*0.07;
+            }
+            System.out.println("Месяц: " + month + ", Сумма: " + total + " рублей");
+            if(total>=accumulation){
+                System.out.println("Cумма достигнута!");
+                break;
+            }
+        }
     }
 }
 
