@@ -9,8 +9,18 @@ public class Main {
         System.out.println("Задание 1");
         int firstFriday = 2;
         int i = firstFriday;
-        for(;i<=31;i+=7){
+        for (; i <= 31; i += 7) {
             System.out.println("Сегодня пятница " + i + "-е число. Необходимо подготовить отчет");
         }
+
+        System.out.println("Задание 2");
+        int allDistance = 42195;
+        int coveredDistance = 0;
+        do {
+            int remainingDistance = allDistance - coveredDistance;
+            System.out.println("Держитесь! Осталось " + remainingDistance + " метров");
+            coveredDistance += 500;
         }
+        while (coveredDistance <= 42195);
     }
+}
